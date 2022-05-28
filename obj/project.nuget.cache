@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1OUiuRozYiDzVsKpQEv6QYjHJx34vAXJ8IXHEatIVPxBAb7bl5aIo2GlCjZyXQoAkS3cv3fT5jGOUcDoEcMt0Q==",
+  "success": true,
+  "projectFilePath": "F:\\Code\\WInLogsViewer\\WInLogsViewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Arventis\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
