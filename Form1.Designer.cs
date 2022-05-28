@@ -72,22 +72,18 @@ namespace WInLogsViewer
             // Date
             // 
             this.Date.Text = "Дата";
-            this.Date.Width = table.Width / 4;
             // 
             // Type
             // 
             this.Type.Text = "Тип";
-            this.Type.Width = table.Width / 4;
             // 
             // Creator
             // 
             this.Creator.Text = "Создатель";
-            this.Creator.Width = table.Width / 4;
             // 
             // Category
             // 
             this.Category.Text = "Категория";
-            this.Category.Width = table.Width / 4;
             // 
             // explorer
             // 
@@ -109,12 +105,10 @@ namespace WInLogsViewer
             // Log
             // 
             this.Log.Text = "Лог";
-            this.Log.Width = 3 * (explorer.Width / 4);
             // 
             // Amount
             // 
             this.Amount.Text = "Количество";
-            this.Amount.Width = (explorer.Width / 4);
             // 
             // Form1
             // 

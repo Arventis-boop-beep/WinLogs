@@ -21,6 +21,13 @@ namespace WInLogsViewer
         public Form1()
         {
             InitializeComponent();
+            Date.Width = table.Width / 4;
+            Type.Width = table.Width / 4;
+            Creator.Width = table.Width / 4;
+            Category.Width = table.Width / 4;
+
+            Log.Width = 3 * (explorer.Width / 4);
+            Amount.Width = (explorer.Width / 4);
         }
 
         private void Form1_Load(object sender, EventArgs e)
