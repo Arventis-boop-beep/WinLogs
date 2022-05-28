@@ -50,7 +50,7 @@ namespace WInLogsViewer
                 entries.CopyTo(sorted, 0);
                 Quicksort(sorted, 0, sorted.Length - 1);
 
-                for(int i = 0; i < sorted.Length; i ++)
+                for (int i = 0; i < sorted.Length; i++)
                 {
                     var row = new ListViewItem(new[] {sorted[i].TimeWritten.ToString(),
                                                       sorted[i].EntryType.ToString(),
@@ -62,9 +62,28 @@ namespace WInLogsViewer
             }
             else if (e.Column == 1)
             {
-                EventLogEntry[] sorted = new EventLogEntry[entries.Count];
-                entries.CopyTo(sorted, 0);
                 table.Items.Clear();
+
+                string[] types = {"Trace", "Debug", "Information", "Warning", "Error", "Critical", "None" };
+                
+                foreach(string type in types)
+                {
+                    foreach(EventLogEntry str in entries)
+                    {
+                        if(str.EntryType.ToString() == type)
+                        {
+                            var row = new ListViewItem(new[] {str.TimeWritten.ToString(),
+                                                      str.EntryType.ToString(),
+                                                      str.Source,
+                                                      str.Category});
+                            table.Items.Add(row);
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                }
 
             }
             else
