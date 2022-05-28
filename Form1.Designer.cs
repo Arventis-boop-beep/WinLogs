@@ -62,7 +62,6 @@ namespace WInLogsViewer
             this.table.MultiSelect = false;
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(862, 532);
-            this.table.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.table.TabIndex = 2;
             this.table.UseCompatibleStateImageBehavior = false;
             this.table.View = System.Windows.Forms.View.Details;

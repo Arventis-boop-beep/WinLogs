@@ -48,17 +48,17 @@ namespace WInLogsViewer
                 EventLogEntry[] sorted = new EventLogEntry[entries.Count];
                 table.Items.Clear();
                 entries.CopyTo(sorted, 0);
-                //Quicksort(sorted, 0, sorted.Length - 1);
-                sorted = BubbleSort(sorted);
+                Quicksort(sorted, 0, sorted.Length - 1);
 
-                foreach (EventLogEntry j in sorted)
+                for(int i = 0; i < sorted.Length; i ++)
                 {
-                    var row = new ListViewItem(new[] {j.TimeWritten.ToString(),
-                                                      j.EntryType.ToString(),
-                                                      j.Source,
-                                                      j.Category});
+                    var row = new ListViewItem(new[] {sorted[i].TimeWritten.ToString(),
+                                                      sorted[i].EntryType.ToString(),
+                                                      sorted[i].Source,
+                                                      sorted[i].Category});
                     table.Items.Add(row);
                 }
+
             }
             else if (e.Column == 1)
             {
@@ -114,7 +114,7 @@ namespace WInLogsViewer
             int marker = start; // divides left and right subarrays
             for (int i = start; i < end; i++)
             {
-                if (DateTime.Compare(array[i].TimeWritten, array[end].TimeWritten) < 0) // array[end] is pivot
+                if (DateTime.Compare(array[i].TimeWritten, array[end].TimeWritten) >= 0) // array[end] is pivot
                 {
                     (array[marker], array[i]) = (array[i], array[marker]);
                     marker++;
